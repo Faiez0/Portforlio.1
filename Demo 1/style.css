@@ -1,0 +1,781 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+ 
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    position: relative;
+    z-index: 10;
+}
+
+#page1{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw ;
+}
+/* ------------------------------- HEADER-nav ---------------------------- */       
+nav{
+    height: 100px;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 10px 0;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+}
+
+#nav-2{
+    display:flex;
+    align-items: center;
+    gap: 1vw;
+    
+}
+
+#nav-2 h5{
+    padding: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    border-radius: 50px;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+#nav-2 h5::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50px;
+    transition: all ease 0.3s;
+}
+
+#nav-2 h5:hover::after{
+    bottom: 0;
+    border-radius: 0;
+    color: white;
+    background-color: black;
+}
+
+#nav-2 h5 a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    z-index: 9;
+}
+
+#nav-2 h5:hover a{
+    color: white;
+}
+
+/*               --------------center------------------ */
+
+#center{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #0000003c;
+}
+
+
+#left h3 {
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+}
+#center h1 {
+    font-size: 10vw;
+    text-align: right;
+    line-height: 8vw;
+}
+
+
+#page1 video{
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 3vw;
+}
+/* 
+              ------------  Animation ---------------------
+*/
+#anima1 {
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 77vh;
+}
+
+#ani-1 {
+    background-color: #FE320A;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(10px);
+    position: absolute;
+}
+
+#ani-2 {
+    background: linear-gradient(#FE320A, #fe3f0a);
+
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(25px);
+}
+
+#ani-3 {
+    background: linear-gradient(#FE320A, #fe3f0a);
+    height: 30vw;
+    position: absolute;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime1 {
+    from {
+        transform: translate(45%, -13%);
+    }
+
+    to {
+        transform: translate(-10%, 20%);
+    }
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(10%, -10%);
+    }
+
+    to {
+        transform: translate(-20%, 30%);
+    }
+}
+/*              -------------------- PAGE 2-----------------------                   */
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    padding: 30px 0;
+    background-color: #EFEAE3;
+    position: relative;
+}
+
+#moving-text {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moving-text h1 {
+    font-size: 6vw;
+    display: inline-block;
+}
+
+#circle {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #FE320A;
+    margin: 1vw;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#page-buttom{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 6vw;
+    justify-content: space-between;
+    position: relative;
+    z-index: 8;
+}
+
+#page-buttom h1{
+    font-size: 3.5vw;
+    width: 50%;
+    line-height: 3.2vw;
+}
+
+#button_2{
+    width: 20%;
+    font-size: small;
+}
+
+#button_2 img{
+    border-radius: 10px;
+    margin-bottom: 30px;
+    
+}
+
+#page2 #anima2 {
+    height: 32vw;
+    width: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #ff3006, #be3f00);
+    top: 50%;
+    left: 23%;
+    filter: blur(20px);
+    animation-name: anime2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes anime2 {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+
+/* ---------------------page3--------------- */
+#page3{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    padding: 4vw 0;
+}
+
+#feat{
+    padding-top: 10px;
+    height: 90px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    overflow: hidden;
+}
+
+#feat h2{
+    font-size: 3.3vw;
+    position: relative;
+    z-index: 9;
+}
+
+#overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #FF9831;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.3s;
+}
+
+#feat:hover #overlay{
+    top: 0;
+}
+
+/*  */
+
+#fixed-image{
+    height: 30vw;
+    width: 24vw;
+    background-color: #be3f00;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 26%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+/*                  --------------------- PAGE 4 --------------------                */
+
+#page4{
+    height: 60vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 4vw 2vw;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    font-size: 18px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid rgba(12, 11, 11, 0.336);
+    text-align: left;
+    padding: 0 6px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-slide {
+    width: 30%;
+  }
+
+  
+/*                  --------------------- PAGE 5 --------------------                */
+
+#page5{
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+}
+
+/*                  --------------------- FOOTER --------------------                */
+
+#footer {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    z-index: 9;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 1vw 3vw;
+    margin-top: 10px;
+}
+
+#footer h1 {
+    font-size: 21vw;
+
+}
+
+#footer-div {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vw;
+    z-index: 99;
+}
+
+
+#fd-left{
+    font-size: 3vh;
+}
+#fd-right{
+    text-align: right;
+    align-items: center;
+    position: relative;
+}
+
+#footer-bottom {
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
+}
+
+.email-bar {
+    background-color: #000000;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.425);
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.email-bar input[type=email] {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    justify-content: right;
+}
+
+.email-bar button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px; 
+    color: white;
+    padding: 1px;
+}
+
+.Footter{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+#footer #anima3 {
+    height: 32vw;
+    width: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #ff3006, #be3f00);
+    top: -35%;
+    left: -8%;
+    filter: blur(20px);
+    animation-name: anime3;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+@keyframes anime3 {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+
+
+#footer #anima4 {
+    height: 20vw;
+    width: 90vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #ff3006, #be3f00);
+    top: -15%;
+    right: -15%;
+    filter: blur(20px);
+    animation-name: anime4;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+@keyframes anime4 {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(20);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(30deg);
+    }
+}
+
+/* ----------------------------- Responsive-------------------- */
+nav h3{
+    display: none;
+}
+
+#full-scr{
+    width: 100%;
+    height: 100vh;
+    background-color: #00000034;
+    position: fixed;
+    z-index: 99;
+    top: -100%;
+    transition: all ease 0.5s;
+}
+
+#full-div1{
+    height: 50%;
+    width: 100%;
+    background-color: #EFEAE3;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+@media (max-width:600px) {
+    #page1{
+        width: 100vw;
+        min-height: 100vh;
+        background-color: #EFEAE3;
+        position: relative;
+        padding: 0 ;
+    }
+
+
+    /* ------------------------------- HEADER-nav ---------------------------- */       
+    nav{
+        background-color: #EFEAE3;
+        padding: 8vw 5vw;
+
+       
+       
+    }
+    
+    nav img{
+        height: 80px;
+        margin-top: -10px;
+    }
+
+    #nav-2{
+
+        display: none;
+    }
+    nav h3{
+        display: block;
+        padding: 1.6vw 4vw;
+        border: 1px solid #00000080;
+        /* margin: 1vw 0; */
+        border-radius: 50px;
+        /* padding-left: 9vw/; */
+        font-size: 18px;
+        color: #0000007a;
+    }
+  
+    /*               --------------center------------------ */
+
+#center{
+    width: 100%;
+    height: 44vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #0000003c;
+    flex-direction: column-reverse;
+    padding: 30px 7px;
+}
+
+#left h3 {
+    width: 80%;
+    font-size: 5.8vw;
+    line-height: 5.5vw;
+    font-weight: bold;
+
+}
+#center h1 {
+    padding-top: 35px;
+    font-size: 15vw;
+    text-align: right;
+    line-height: 12vw;
+}
+
+#anima1 {
+    position: absolute;
+    width: 76vw;
+    height: 56vw;
+    right: 0;
+    top: 49vh;
+}
+
+
+#page1 video{
+    position: relative;
+    width: 94%;
+    border-radius: 15px;
+    margin-top: 3vw;
+    margin-left: 3%;
+    height: 60vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+#moving-text h1 {
+    font-size: 14vw;
+    display: inline-block;
+}
+
+#circle {
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #FE320A;
+    margin: 2vw;
+}
+
+#page2{
+    min-height: 78vh;
+    width: 100%;
+    padding: 30px 0;
+    background-color: #EFEAE3;
+    position: relative;
+}
+#page-buttom{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    padding: 10vw 0;
+    justify-content:right;
+    position: relative;
+    z-index: 8;
+    flex-direction: column;
+    padding: 50px 20px;
+    align-items: start;
+    
+}
+
+#page-buttom h1{
+    font-size: 1.8rem;
+    width: 95%;
+    line-height: 6.5vw;
+    font-family: Neuehaasdisplay mediu,sans-serif;
+}
+
+#button_2{
+    margin-top: 5px;
+    width: 70%;
+    font-size: small;
+}
+
+#button_2 img{
+    border-radius: 10px;
+    margin-bottom: 35px;
+    margin-top: 50px;
+    
+}
+
+#page2 #anima2 {
+    height: 58vw;
+    width: 58vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #ff3006, #be3f00);
+    top: 30%;
+    left: 50%;
+    filter: blur(20px);
+    animation-name: anime2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes anime2 {
+    from {
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+    
+}
+
+
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    transition: all linear 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1{
+    font-size: 4vw;
+    color: transparent;
+    background: linear-gradient(to right,orange,orangered);
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media (max-width:600px) {
+    #loader h1{
+        font-size: 10vw;
+    }
+
+}
